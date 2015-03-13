@@ -248,6 +248,8 @@ def generateInputFile(opts):
     nwfile += "optimize"
   elif calculate == 'Frequencies':
     nwfile += "freq"
+  elif calculate == 'Gradient':
+      nwfile += "gradient"
   else:
     raise Exception("Invalid calculation type: %s"%calculate)
   nwfile += "\n"
