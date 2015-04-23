@@ -240,6 +240,9 @@ def generateInputFile(opts):
   else:
     raise Exception("Invalid Theory: %s"%theory)
 
+  if 'Steps' in opts:
+      nwfile += "driver\n  MAXITER %d\nend\n"%opts['Steps']
+
   # Task
   nwfile += "task %s "%task
   if calculate == 'Single Point':
